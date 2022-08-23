@@ -2,8 +2,8 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap/Button";
-import { Alert } from "bootstrap";
-
+import './style.css';
+import { CardGroup } from "react-bootstrap";
 
 
 class ChildHorned extends React.Component{
@@ -21,21 +21,32 @@ class ChildHorned extends React.Component{
         })
     }
 
+
     render(){
         return(
-                <Card>
-                    <Card.Img variant="top" src={this.props.imgUrl} onClick={this.incrementLikes} />
-                    <Card.Body>
+            <Card id="labCard">
+                <Card.Img src={this.props.imgUrl} variant="top" onDoubleClick={this.incrementLikes} />
+                <Card.Body>
                     <Card.Title> {this.props.Title} </Card.Title>
                     <Card.Text> {this.props.description} </Card.Text>
-                    <Card.Text>LIKES : {this.state.likes}❤️</Card.Text>
-                    </Card.Body>
-                    <Button variant="primary">Go somewhere</Button>
-                    <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                </Card>
-         
+                    <Card.Text>LIKES : {this.state.likes}❤️</Card.Text>                
+                </Card.Body>
+                <Button variant="primary">Go somewhere</Button>
+            </Card>
+        //    <CardGroup>
+        //             <Card className="card" >
+        //                 <Card.Img className="img" variant="top" src= onDoubleClick={this.incrementLikes} />
+        //                 <Card.Body>
+        //                 <Card.Title> {this.props.Title} </Card.Title>
+        //                 <Card.Text> {this.props.description} </Card.Text>
+        //                 <Card.Text>LIKES : {this.state.likes}❤️</Card.Text>
+        //                 </Card.Body>
+        //                 <Button variant="primary">Go somewhere</Button>
+        //                 <Card.Footer>
+        //                 <small className="text-muted">Last updated 3 mins ago</small>
+        //                 </Card.Footer>
+        //             </Card>
+        //     </CardGroup>    
             
         )
     }
