@@ -1,27 +1,23 @@
 import React from "react";
 import ChildHorned from "./ChildHorned";
+import data from './data.json'
+// import { Row } from "react-bootstrap";
 import './style.css';
 
 
+let hornsbeast = data.map(element => 
+    <ChildHorned 
+    id = {element._id}
+    title = {element.title}
+    imgUrl = {element.image_url}
+    description = {element.description} />
+)
 
 class Main extends React.Component{
-
-    
-
     render(){
         return(
-            <div id = "card">
-                {this.props.horndBeastData.map(element => 
-    
-                <ChildHorned 
-                id = {element._id}
-                title = {element.title}
-                imgUrl = {element.image_url}
-                description = {element.description}
-                myFunction={this.props.myFunction} 
-    
-    />
-)}
+            <div id = "cards">
+                {hornsbeast}
             </div>
             
 
