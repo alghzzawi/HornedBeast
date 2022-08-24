@@ -13,11 +13,3 @@
     height: 50%;
 }
 
-#labCard{
-    overflow: hidden;
-    box-shadow: 0px;
-    text-align: center;
-    border-radius: 2.5rem;
-    font-size: 16px;
-    font-family: cursive;
-}
