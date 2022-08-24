@@ -11,6 +11,9 @@ class Main extends React.Component{
     render(){
         return(
             <div id = "cards">
+
+                
+
                 {this.props.horndBeastData.map(element => 
     
                 <ChildHorned 

@@ -1,11 +1,23 @@
 
+#header{
+    background: rgba(92, 90, 90, 0.63);
+    width: 100%;
+    padding: 10px 50px;
+    align-items: center;
+    text-align: center;
+}
+
 
 #cards{
     display: grid;
     grid-template-columns: 17.04% 17.04% 17.04% 17.04% 17.04%;
     height: 50%;
     gap: 50px;
-    margin-bottom: 7%;
+    padding: 1% 0% 5%;
+    background: rgba(0,0,0,0.63);
+    background: rgba(207, 207, 207, 0.63);
+
+
 }
 
 #labCard img{
@@ -14,10 +26,32 @@
 }
 
 #labCard{
+    
     overflow: hidden;
     box-shadow: 0px;
     text-align: center;
     border-radius: 2.5rem;
     font-size: 16px;
     font-family: cursive;
+}
+
+
+.modal-body img{
+    width: 100%;
+    height: 57.3vh;
+}
+
+.modal-body p{
+    font-size: 16px;
+    font-family: cursive;
+}
+
+.modal-header div{
+    font-size: 31px;
+    font-family: cursive;
+}
+
+#foorter{
+    background: rgba(92, 90, 90, 0.63);
+    padding: 5% 3%;
 }
