@@ -10,7 +10,7 @@ class Main extends React.Component{
 
     render(){
         return(
-            <div id = "card">
+            <div id = "cards">
                 {this.props.horndBeastData.map(element => 
     
                 <ChildHorned 
