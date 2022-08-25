@@ -9,7 +9,11 @@ class ChildHorned extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            likes : 0
+            likes : 0,
+            s :""
+        }
+        if (this.props.horns > 1) {
+            this.state.s = "s";
         }
     }
 
@@ -17,8 +21,10 @@ class ChildHorned extends React.Component{
         this.setState({
             likes : this.state.likes + 1
         })
+        
     }
 
+    
 
     render(){
         return(
@@ -28,7 +34,8 @@ class ChildHorned extends React.Component{
                 <Card.Body>
                     <Card.Title> {this.props.Title} </Card.Title>
                     <Card.Text> {this.props.description} </Card.Text>
-                    <Card.Text>LIKES : {this.state.likes}❤️</Card.Text>                
+                    <Card.Text>LIKES : {this.state.likes}❤️</Card.Text>   
+                    <Card.Text>this beast have {this.props.horns} horn{this.state.s}</Card.Text>             
                 </Card.Body>
                 <Button variant="info" onClick={()=>{this.props.myFunction(this.props.title)}} >open this card beast</Button>
                 <Card.Footer>
